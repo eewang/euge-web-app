@@ -1,0 +1,20 @@
+.blog {
+	display:block;
+}
+
+#main {
+	display:block;
+}
+
+.button {
+	text-align:center;
+}
+
+form {
+	text-align:left;
+}
+
+ul.field {
+	font-weight:bold;
+	font-family:"Helvetica";
+}

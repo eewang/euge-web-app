@@ -1,41 +1,23 @@
 <html>
 
 <head>
+	{% extends "home_page.html" %}
+	{% block content %}
 	<title>Blog Post</title>
-
-<style type="text/css">
-
-.blog {
-	display:block;
-}
-
-#main {
-	display:block;
-}
-
-.button {
-	text-align:center;
-}
-
-form {
-	text-align:left;
-}
-
+	<link rel="stylesheet" href="{{ STATIC_URL }}blog_form.css">
 </style>	
 
 </head>
 
 <body>
-	{% extends "home_page.html" %}
-	{% block content %}
 	<h1>Blog Post</h1>
 	<div class="blog">	
 	<form action="" method="POST">{% csrf_token %}
 		<ul>
-			<ul><b>Title:</b>{{ form.title }}</ul>
-			<ul><b>Date:</b>{{ form.date }}</ul>
-			<ul><b>Author:</b>{{ form.author }}</ul>
-			<ul><b>Body:</b>{{ form.body }}</ul>
+			<ul class="field">Title: {{ form.title }}</ul>
+			<ul class="field">Date: {{ form.date }}</ul>
+			<ul class="field">Author: {{ form.author }}</ul>
+			<ul class="field">Body: {{ form.body }}</ul>
 		</ul>
 	<br>
 	</form>	
