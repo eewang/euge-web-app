@@ -1,0 +1,117 @@
+#header {
+	position:fixed;`
+	top:0px;
+	left:0px;
+	height:200px;
+	width:100%;
+	z-index:1000;
+	background:#123;
+}
+
+#header .title {
+	position:relative;
+	top:-50px;
+        color: blue;
+        font-size: 80px;
+	font-family:"Franklin Gothic Medium", Arial, sans-serif;
+	font-style:bold;
+        text-align: center;
+}
+
+#header .sub-title {
+	position:relative;
+	top:-100px;
+	font-size: 24px;
+	font-family: "Franklin Gothic Medium", Arial, sans-serif;
+	font-style:italic;
+	color:white;
+	text-align:center;
+}
+
+div.wrap {
+	top:200px;
+	position:relative;
+        margin: 10px auto;
+        padding: 10px 10px;
+        background: #99c;
+        text-align: center;
+        border: solid;
+
+}
+
+#nav {
+        display: block;
+        text-align:center;
+        border-bottom: solid;
+        margin-bottom:10px;
+}
+
+#nav ul {
+        display:inline-block;
+        width:118px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: auto;
+        padding: 5px 10px 5px 10px;
+        border: solid;
+        border-radius:10px;
+        color:#050;
+        font:bold 100% 'trebuchet ms', helvetica, sans-serif;
+        background:#fed;
+}
+
+#nav ul:hover {
+	background:#eef;
+}
+
+.selected {
+	background:red;
+}
+
+#main {
+        display:inline-block;
+        float:left;
+        background:#9c9;
+        border: solid;
+        margin-bottom:10px;
+        clear:both;
+        width:80%;
+        height:100%;
+}
+
+#sidebar {
+        float:right;
+        position:relative;
+        display:inline-block;
+        background:#9c9;
+        border: solid;
+        height: 100%;
+        width:18%;
+        margin-bottom:10px;
+        padding-top:10px;
+}
+
+
+#footer {
+        clear:both;
+        padding:5px 10px;
+        background:#cc9;
+        border: solid;
+        height:20%;
+}
+
+#sidebar form {
+        font-size:12px;
+        font-weight:700;
+        padding:2px 6px;
+        height:28px;
+        color:#fff;
+        border-radius:5px;
+}
+
+.button {
+        color:#050;
+        font: bold 150% 'trebuchet ms', helvetica, sans-serif;
+        background:#fed;
+
+}

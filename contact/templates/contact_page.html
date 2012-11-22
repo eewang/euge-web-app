@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Contact List</title>
+</head>
+<style type="text/css">
+
+h2 {
+	padding-left:5px;
+	margin-bottom:-5px;
+	text-align:left;
+}
+
+ul.attr {
+	text-align:left;
+	padding-left:5px;
+	height:5px;
+
+}
+
+.pagination {
+	position:relative;
+	bottom: 0;
+	left: 0;
+}
+
+</style>
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	<p>Welcome to Eugene's Contact List!</p>
+	{% for c in contacts %}
+		<h2>{{ c.first_name }} {{ c.last_name }}</h2>
+		<ul class='attr'><b>E-mail:</b> {{ c.email }}</ul>
+		<ul class='attr'><b>Birthday:</b> {{ c.birthday }}</ul>
+		<ul class='attr'><b>Company:</b> {{ c.company }}</ul>
+		<ul class='attr'><b>How I know him/her:</b> {{ c.context }}</ul> 
+		<br>
+	{% endfor %}
+	<div class="pagination">
+		<span class="step-links">
+			{% if contacts.has_previous %}
+				<a href="?page={{ contacts.previous_page_number }}">previous</a>
+			{% endif %}
+			<span class="current">
+				Page {{ contacts.number }} of {{ contacts.paginator.num_pages }}
+			</span>
+			{% if contacts.has_next %}
+				<a href="?page={{ contacts.next_page_number }}">next</a>
+			{% endif %}
+		</span>
+	</div>
+	{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>
+Eugene's Blog
+</title>
+
+<style type='text/css'>
+
+h1 {
+	color:blue;
+	text-align:left;
+	font-size:20px;
+	padding-left:10px;
+}
+
+h2 {
+	color:green;
+	text-align:left;
+	font-size:16px;
+	padding-left:10px;
+}
+
+p {
+	color:black;
+	text-align:left;
+	font-size:12px;
+	margin: lem 0;
+	padding-left:10px;
+}
+
+</style>
+
+</head>
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	{% for p in posts %}
+		<h1>{{p.title}}</h1>
+		<h2>Written by {{p.author.name}} on {{p.date}} </h2>
+		<p>{{ p.body }}</p>
+		<br>
+		
+	{% endfor %}
+	{% endblock %}
+</body>
+</html>

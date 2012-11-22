@@ -1,0 +1,25 @@
+<html>
+{% extends 'home_page.html' %}
+{% block content %}
+<head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1-vsdoc.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}tasks.js"></script>
+<link rel="stylesheet" href="{{ STATIC_URL }}tasks.css">
+
+</head>
+<body>
+	<h1>My Task List</h1>
+	<div class="task-bar">
+	{% for task_dict in task_listing %}
+		<div class="task-list">
+			<h3>{{ task_dict.list_object.title }}</h3>
+			<div class="task-list-detail">
+				<p>Tasks: {{ task_dict.items_complete }} of {{ task_dict.item_count }} tasks complete ({{ task_dict.percent_complete }}%)</p>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+</body>
+{% endblock %}
+</html>

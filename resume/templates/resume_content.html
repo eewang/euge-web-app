@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+{% extends "home_page.html" %}
+{% block content %}
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1-vsdoc.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}resume_javascript.js"></script>
+<link rel="stylesheet" href="{{ STATIC_URL }}resume_style.css">
+
+<title>Eugene Wang's Resume</title>
+</head>
+<body>
+<div class="tabbed-menu tabs">
+	<ul class="tabs">
+		<li class="tabs selected" id="page1">Education</li>
+		<li class="tabs" id="page2">Experience</li>
+		<li class="tabs" id="page3">Skills and Interests</li>
+	</ul>
+</div>
+<div class="content">
+	<div class="page selected" id="page1">
+		<div class="header">Duke University</div>
+			<div class="detail">
+				<li><b>Degrees</b>: Economics (Bachelor of Science) and Public Policy Studies (Bachelor of Arts)</li>
+				<li><b>Grade Point Average (GPA)</b></li>
+					<ul>
+						<li><b>Overall</b>: 3.91/4.00</li>
+						<li><b>Economics</b>: 3.97/4.00</li>
+						<li><b>Public Policy</b>: 3.95/4.00</li>
+					</ul>
+				<li><b>Study Abroad</b></li>
+					<ul>
+						<li>Duke-in-Geneva: International Business and Globalization (Geneva, Switzerland; Summer 2007)</li>
+					</ul>
+				<li><b>Major Coursework</b></li>
+					<ul>
+						<li>Econometrics, Statistics, Multivariable Calculus, Financial Markets and Investments, Financial Accounting</li>
+					</ul>
+				<li><b>Honors</b>: Magna Cum Laude, Phi Beta Kappa, Five-time Dean's List with Distinction, National Merit Scholar</li>
+			</div>
+	</div>
+	<div class="page" id="page2">
+		<div class="header">The Blackstone Group</div>
+			<div class="detail">
+				<p>Analyst, Blackstone Alternative Asset Management</p>
+				<p>July 2010 to Present</p>
+				<ul>
+					<li>Assist in developing, managing and tracking multi-manager portfolios for Blackstone's $40 billion hedge fund solutions division</li>
+                    <li>Perform client insight analyses to evaluate marketing and pricing strategies for BAAM's 50-plus customized relationships</li>
+                    <li>Design portfolio optimization models and assist in development of top-down allocation strategies with BAAM’s chief economist</li>
+					<li>Evaluate and redesign operational processes within the fund products group that has enabled more rapid client onboarding and  a smoother transition from client to customized mandate</li>
+					<li>Spearhead two technology projects to create cross-functional tools to organize, analyze and disseminate unstructured legal and operational data, and manage a team of 8 analysts and associates to transfer data to this scalable platform</li>
+					<li>Manage a team of 3 analysts to address client reporting requests and develop new data-driven analyses using Excel, analyses used by the client service team to win new business and the portfolio management team to better manage portfolio allocations</li>
+					<li>Structure and negotiate business deals as part of the deal team for an internal special situations hedge fund</li>
+					<li>Devise and implement innovative structuring solutions during complex business and legal negotiations with underlying hedge fund managers and clients, including fee clawback and contingent liquidity mechanisms</li>
+					<li>Construct a customized mandate pricing model to standardize the fees charged based on product characteristics using a variety of investment, operational, legal and client servicing data</li>
+				</ul>
+			</div>
+		<div class="header">KPMG Advisory</div>
+			<div class="detail">
+				<p>Summer Associate, Forensic Services</p>
+				<p>July 2009 to August 2009</p>
+				<ul>
+					<li>Refine and develop complex government pricing models for large pharmaceutical firms using SQL</li>
+					<li>Analyzed a health care company’s financial, tax, pension and operational documents to trace assets through multiple restructurings and develop a framework to investigate how resources were utilized by the company</li>
+					<li>Researched and prepared presentations for fraud investigations into select KPMG audit clients</li>
+				</ul>
+			</div>
+		<div class="header">Wachovia Securities</div>
+			<div class="detail">
+				<p>Financial Analyst Intern, Wealth Management</p>
+				<p>May 2008 to August 2008</p>
+				<ul>
+					<li>Reviewed asset portfolios for four partners at a Wachovia investment group to implement investment strategies</li>
+					<li>Generated recommendations on mutual funds for the group by researching fund performance metrics and investment styles</li>
+				</ul>
+			</div>
+		<div class="header">The (Duke) Chronicle</div>
+			<div class="detail">
+				<p>Recess Managing Editor, Senior Editor</p>
+				<p>May 2009 to May 2010</p>
+				<ul>
+					<li>Edited and designed the weekly arts &amp; entertainment section of The Chronicle – Duke’s independent daily student newspaper</li>
+					<li>Created performance metrics to gauge journalistic value and improve operational efficiencies using various databases</li>
+				</ul>
+				<p>Managing Editor</p>
+				<p>May 2008 to May 2009</p>
+				<ul>
+					<li>Devoted about 40 to 50 hours per week as Managing Editor to leading a 100-plus student-volunteer staff, coordinated the daily production process between staff and editors, produced the news section and edited articles, headlines and captions</li>
+					<li>Made major editorial decisions alongside the Editor, News Editor and Sports Editor to coordinate coverage of breaking news</li>
+					<li>Spearheaded the development of the first-ever scientific poll of undergraduate political preferences prior to the 2008 election</li>
+					<li>Managed and taught a design team of approximately 5 students in developing graphics and design packages</li>
+				</ul>
+				<p>Associate Editor for News</p>
+				<p>Jan 2009 to May 2010</p>
+				<ul>
+					<li>Reported, wrote and copy-edited 2 to 3 stories a week and mentor new writers on research, interview and writing strategies</li>
+				</ul>
+			</div>
+		<div class="header">Sanford School of Public Policy</div>
+			<div class="detail">
+				<p>Research Analyst</p>
+				<p>Jan 2009 to May 2010</p>
+				<ul>
+					<li>Conducted comparative education research on and analyzed socioeconomic data related to North Carolina’s public schools</li>
+					<li>Reviewed and analyzed research papers on international trade and development economics for a macroeconomics professor</li>
+				</ul>
+			</div>
+	</div>
+    <div class="page" id="page3">
+        <div class="header">Extracurriculars</div>
+            <div class="detail">
+                <p>Hope For New York</p>
+                <p>Jan 2012 to Aug 2012</p>
+                <ul>
+                    <li>Serve as HFNY's team lead in coordinating volunteer activities for a homeless shelter</li>
+                    <li>Volunteer as an overnight host on a biweekly basis and attend to the needs of 10 to 12 homeless men<li>
+                </ul>
+            </div>
+    </div>
+   <div class="page" id="page4">
+		<div class="header">Skills</div>
+			<div class="detail">
+				<ul>
+					<li><em>Technical</em> – SQL, VBA, HTML 5, CSS, JavaScript/jQuery, Python, Stata, SPSS, ArcGIS, Microsoft Office (Excel, PowerPoint, Access), Adobe (InDesign, Illustrator, Photoshop)</li>
+					<li><em>Language</em> - Chinese (moderate proficiency)</li>
+				</ul>
+			</div>
+		<div class="header">Interests</div>
+			<div class="detail">
+				<ul>
+					<li>Volunteering (Eagle Academy, MAPC/St. James Homeless Shelter), snowboarding, intramural football and volleyball, web development</li>
+				</ul>
+			</div>
+	</div>
+</div>
+</body>
+{% endblock %}
+</html>

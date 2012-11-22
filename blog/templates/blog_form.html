@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Blog Post</title>
+
+<style type="text/css">
+
+.blog {
+	display:block;
+}
+
+#main {
+	display:block;
+}
+
+.button {
+	text-align:center;
+}
+
+form {
+	text-align:left;
+}
+
+</style>	
+
+</head>
+
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	<h1>Blog Post</h1>
+	<div class="blog">	
+	<form action="" method="POST">{% csrf_token %}
+		<ul>
+			<ul><b>Title:</b>{{ form.title }}</ul>
+			<ul><b>Date:</b>{{ form.date }}</ul>
+			<ul><b>Author:</b>{{ form.author }}</ul>
+			<ul><b>Body:</b>{{ form.body }}</ul>
+		</ul>
+	<br>
+	</form>	
+	<input class="button" type="submit" value="Save Post">	
+	</div>
+	{% endblock %}
+</body>
+	
+</html>

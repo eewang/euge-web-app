@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<title>Eugene Wang</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}home_css.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1-vsdoc.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}home_js.js"></script>
+</head>
+
+<body>
+	<div id="header">
+	<p class="title">Eugene Wang</p>
+	<p class="sub-title">"Not all who wander are lost"</p>
+	</div>
+	<br>
+	<div class="wrap">
+		<div id="nav">
+		<ul><a href="http://127.0.0.1:8000/">HOME</a></ul>
+		<ul><a href="http://127.0.0.1:8000/resume/">RESUME</a></ul>
+		<ul><a href="http://127.0.0.1:8000/blog/">BLOG</a></ul>
+		<ul><a href="http://127.0.0.1:8000/links/">LINKS</a></ul>
+		<ul><a href="http://127.0.0.1:8000/contact_list/">CONTACTS</a></ul>
+		<ul><a href="http://127.0.0.1:8000/tasks/">TASKS</a></ul>
+		<ul><a href="http://127.0.0.1:8000/contact/">SEND A NOTE!</a></ul>
+		<ul><a href="http://127.0.0.1:8000/vocab/">VOCAB LIST</a></ul>
+		<ul><a href="http://127.0.0.1:8000/maps/nyc_electric/">MAPS</a></ul>
+		</div>
+		<div id="main">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<div id="sidebar">
+			<form action="http://127.0.0.1:8000/blog/create/">
+			<input type="submit" class="button" value="Create Blog Post">
+			</form>
+			<form action="http://127.0.0.1:8000/contact_list/add/">
+			<input type="submit" class="button" value="Add a Contact">
+			</form>
+			<form action="http://127.0.0.1:8000/vocab/add/">
+			<input type="submit" class="button" value="Add a Vocab Word">
+			</form>
+		</div>
+		<div id="footer">
+			<form action="http://127.0.0.1:8000/admin/">
+			<input type="submit" value="Go To Admin Site">
+		</div>
+	</div>
+</body>
+</html>

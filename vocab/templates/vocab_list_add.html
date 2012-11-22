@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Add a Vocabulary Word</title>
+<style type="text/css">
+
+</style>
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	<h1>Add Vocab Word</h1>
+	<form action="" method="post">{% csrf_token %}
+		<ul class="create_vocab">
+			<ul><b>Word: </b>{{ form.word }}</ul>
+			<ul><b>Definition: </b>{{ form.definition }}</ul>
+			<ul><b>Synonym(s): </b>{{ form.synonym }}</ul>
+			<ul><b>Antonym(s): </b>{{ form.antonym }}</ul>
+		</ul>
+	<br>
+	<input class="button" type="submit" value="Save Word">
+	</form>
+	{% endblock %}
+</html>
+

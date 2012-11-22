@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Vocab List</title>
+</head>
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	<p>Vocabulary List</p>
+	{% for v in vocab %}
+		<h2>{{ v.word }}</h2>
+		<ul class='definition'><b>Definition:</b> {{v.definition}}</ul>
+		<ul class='related'><b>Synonyms:</b> {{v.synonym}}</ul>
+		<ul class='related'><b>Antonyms:</b> {{v.antonym}}</ul>
+	{% endfor %}
+	<div class="pagination">
+		<span class="step-links">
+			{% if vocab.has_previous %}
+				<a href="?page={{ vocab.previous_page_number }}">Previous</a>
+			{% endif %}
+			<span class="current">
+				Page {{ vocab.number }} of {{ vocab.paginator.num_pages }}
+			</span>
+			{% if vocab.has_next %}
+				<a href="?page={{ vocab.next_page_number }}">Next</a> 
+			{% endif %}
+		</span>
+	</div>
+	{% endblock %}
+</body>
+

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Contact Me</title>
+
+<style type="text/css">
+
+.field {
+	text-align:left;
+	padding-left:10px;
+}
+
+</style>
+
+</head>
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	<h1>Contact Me!</h1>
+	{% if form.errors %}
+		<p style="color: red;">
+			Please correct the error{{ form.errors|pluralize }} below.
+		</p>
+	{% endif %}
+	<form action="" method="post">
+		<div class="field">
+			{{ form.subject.errors }}
+			<label for="id_subject">Subject:</label>
+			{{ form.subject }}
+		</div>
+		<div class="field">
+			{{ form.email.errors }}
+			<label for="id_email">Your e-mail address:</label>
+			{{ form.email }}
+		</div>
+		<div class="field">
+			{{ form.message.errors }}
+			<label for="id_message">Message:</label>
+			{{ form.message }}
+		</div>
+		<input type="submit" value="Submit">
+	</form>
+	{% endblock %}
+</body>
+</html>

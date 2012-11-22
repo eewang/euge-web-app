@@ -1,0 +1,25 @@
+.task-bar {
+	border:none;
+	margin-left:10px;
+	margin-right:10px;
+	display:inline-block;
+	text-align:center;
+}
+
+
+.task-list {
+	display:block;
+	border:solid;
+	width:300px;
+	margin-bottom:5px;
+	text-align:center;
+}
+
+.task-list:hover{
+	cursor:pointer;
+	background:red;
+}
+
+.task-list-detail {
+	display:none;
+}

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>Add A Contact</title>
+<style type="text/css">
+
+.create_contact {
+	text-align:left;
+	display:block;
+}
+
+</style>
+
+<body>
+	{% extends "home_page.html" %}
+	{% block content %}
+	<h1>Add Contact</h1>
+	<form action="" method="post">{% csrf_token %}
+		<ul class="create_contact">
+			<ul><b>First Name:</b> {{ form.first_name }}</ul>
+			<ul><b>Last Name:</b> {{ form.last_name }}</ul>
+			<ul><b>E-mail Address:</b> {{ form.email }}</ul>
+			<ul><b>Birthday: </b>{{ form.birthday }}</ul>
+			<ul><b>Company: </b>{{ form.company }}</ul>
+			<ul><b>How I know him/her:</b> {{ form.context }}</ul>
+		</ul>
+	<br>
+	<input class="button" type="submit" value="Save Contact">
+	</form>
+	{% endblock %}
+</html>
