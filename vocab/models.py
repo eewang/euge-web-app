@@ -9,7 +9,7 @@ class Vocab(models.Model):
 #	example = models.TextField('Example Sentence')
 
 	def __str__(self):
-		return "%" % (self.word) 
+		return "%s" % (self.word) 
 
 admin.site.register(Vocab)
 

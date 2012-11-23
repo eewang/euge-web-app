@@ -7,11 +7,11 @@ from blog.forms import ContactForm, BlogForm
 def home(request):
 	return render_to_response('home_body.html', context_instance=RequestContext(request))
 
-def index(request):
+def blog(request):
 	all_posts = Post.objects.all().order_by('-date')
 	template_data = {'posts' : all_posts}
 
-	return render_to_response('index.html', context_instance=RequestContext(request, template_data))
+	return render_to_response('blog.html', context_instance=RequestContext(request, template_data))
 
 def current(request):
 	return HttpResponse("Welcome to the test page at %s" % request.path)

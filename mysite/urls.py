@@ -22,7 +22,7 @@ urlpatterns += patterns('',
 
 urlpatterns += patterns('blog.views',
 	url(r'^$', 'home'),
-	url(r'^blog/$', 'index'),
+	url(r'^blog/$', 'blog'),
 	url(r'^blog/create/$', 'blog_post'),
 	url(r'^test/$', 'current'),
 	url(r'^test2/$', 'display_meta'),

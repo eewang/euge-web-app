@@ -12,7 +12,7 @@
 <body>
 	<h1>Blog Post</h1>
 	<div class="blog">	
-	<form action="" method="POST">{% csrf_token %}
+	<form action="" method="post">{% csrf_token %}
 		<ul>
 			<ul class="field">Title: {{ form.title }}</ul>
 			<ul class="field">Date: {{ form.date }}</ul>
@@ -20,8 +20,8 @@
 			<ul class="field">Body: {{ form.body }}</ul>
 		</ul>
 	<br>
-	</form>	
 	<input class="button" type="submit" value="Save Post">	
+	</form>
 	</div>
 	{% endblock %}
 </body>

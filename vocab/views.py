@@ -22,7 +22,7 @@ def vocab_list_add(request):
 		form = VocabListForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpReponseRedirect('/vocab/save/')
+			return HttpResponseRedirect('/vocab/save/')
 	else:
 		form = VocabListForm()
 	return render_to_response('vocab_list_add.html', {'form': form}, context_instance=RequestContext(request))
