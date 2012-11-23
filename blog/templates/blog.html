@@ -1,46 +1,22 @@
 <html>
-<head>
-<title>
-Eugene's Blog
-</title>
-
-<style type='text/css'>
-
-h1 {
-	color:blue;
-	text-align:left;
-	font-size:20px;
-	padding-left:10px;
-}
-
-h2 {
-	color:green;
-	text-align:left;
-	font-size:16px;
-	padding-left:10px;
-}
-
-p {
-	color:black;
-	text-align:left;
-	font-size:12px;
-	margin: lem 0;
-	padding-left:10px;
-}
-
-</style>
-
-</head>
-<body>
 	{% extends "home_page.html" %}
 	{% block content %}
+<head>
+	<title>Eugene's Blog</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}blog.css">
+</head>
+<body>
+	<div class="blog-box">
+	<br>
+	<h1 class="blog-head">Eugene's Blog</h1>
+	<br>
 	{% for p in posts %}
+		<div class="line"><span>{{p.date}}</span></div>
 		<h1>{{p.title}}</h1>
 		<h2>Written by {{p.author.name}} on {{p.date}} </h2>
 		<p>{{ p.body }}</p>
-		<br>
-		
 	{% endfor %}
+	</div>
 	{% endblock %}
 </body>
 </html>
